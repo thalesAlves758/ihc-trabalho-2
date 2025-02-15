@@ -1,9 +1,11 @@
 import products from './data/products.json' with { type: "json" };
 
 const productsElement = document.getElementById('products');
+const cartCounterElement = document.getElementById('shopping-cart-counter');
 
 initializeWindowFunctions();
 renderProducts(products);
+updateCartCounter();
 
 function initializeWindowFunctions() {
   window.addToCart = productId => {
@@ -22,6 +24,7 @@ function initializeWindowFunctions() {
 
     savePropertyInSessionStorage('shoppingCart', shoppingCart);
     renderProducts(products);
+    updateCartCounter();
   }
 
   window.removeFromCart = productId => {
@@ -31,6 +34,7 @@ function initializeWindowFunctions() {
 
     savePropertyInSessionStorage('shoppingCart', updatedCart);
     renderProducts(products);
+    updateCartCounter();
   }
 }
 
@@ -83,6 +87,14 @@ function renderProducts(products) {
       </div>
     `;
   }).join('');
+}
+
+function updateCartCounter() {
+  const shoppingCart = getPropertyFromSessionStorage('shoppingCart', []);
+
+  if (shoppingCart.length) {
+    cartCounterElement.innerText = shoppingCart.length > 9 ? '9+' : shoppingCart.length;
+  }
 }
 
 function getPropertyFromSessionStorage(key, defaultValue) {
