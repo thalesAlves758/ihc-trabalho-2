@@ -2,9 +2,46 @@ import products from './data/products.json' with { type: "json" };
 
 const productsElement = document.getElementById('products');
 
-renderProcuts(products);
+initializeWindowFunctions();
+renderProducts(products);
 
-function renderProcuts(products) {
+function initializeWindowFunctions() {
+  window.addToCart = productId => {
+    const shoppingCart = getPropertyFromSessionStorage('shoppingCart', []);
+
+    const productInCartIndex = shoppingCart.findIndex(cartItem => cartItem.productId === productId);
+
+    if (productInCartIndex > -1) {
+      shoppingCart[productInCartIndex].amount++;
+    } else {
+      shoppingCart.push({
+        productId,
+        amount: 1
+      });
+    }
+
+    savePropertyInSessionStorage('shoppingCart', shoppingCart);
+    renderProducts(products);
+  }
+
+  window.removeFromCart = productId => {
+    const shoppingCart = getPropertyFromSessionStorage('shoppingCart', []);
+
+    const updatedCart = shoppingCart.filter(cartItem => cartItem.productId !== productId);
+
+    savePropertyInSessionStorage('shoppingCart', updatedCart);
+    renderProducts(products);
+  }
+}
+
+function renderProducts(products) {
+  const shoppingCart = getPropertyFromSessionStorage('shoppingCart', []);
+
+  const shoppingCartMap = shoppingCart.reduce((map, cartItem) => {
+    map[cartItem.productId] = cartItem;
+    return map;
+  }, {});
+
   productsElement.innerHTML = products?.map(product => {
     const value = parseInt(product.price / 100);
     const cents = product.price - value * 100;
@@ -35,11 +72,23 @@ function renderProcuts(products) {
             </p>
 
             <div class="w-full flex">
-              <button class="text-sm rounded-2xl self-center py-1 w-full mx-2 bg-orange-300">Adicionar ao carrinho</button>
+              <button class="text-sm rounded-2xl self-center py-1 w-full mx-2 bg-orange-300 hover:cursor-pointer" onclick="addToCart(${product.id})">Adicionar ao carrinho</button>
             </div>
+
+            <p class="text-xs text-gray-500 font-bold mt-2 ${!shoppingCartMap[product.id] ? 'hidden' : ''}">
+              ${shoppingCartMap[product.id]?.amount > 9 ? '9+' : shoppingCartMap[product.id]?.amount} no carrinho - <button class="underline hover:cursor-pointer" onclick="removeFromCart(${product.id})">excluir</button>
+            </p>
           </div>
         </div>
       </div>
     `;
   }).join('');
+}
+
+function getPropertyFromSessionStorage(key, defaultValue) {
+  return sessionStorage.getItem(key) ? JSON.parse(sessionStorage.getItem(key)) : defaultValue;
+}
+
+function savePropertyInSessionStorage(key, value) {
+  sessionStorage.setItem(key, JSON.stringify(value));
 }
