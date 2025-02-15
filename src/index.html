@@ -3,11 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
   <link href="./output.css" rel="stylesheet">
+
+  <script src="script.js" type="module" defer></script>
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+  <header class="h-18 bg-orange-300 w-full flex justify-center items-center border-b border-gray-300">
+    <div class="flex justify-between items-center px-3 w-full gap-3 sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
+      <span>Logo</span>
+
+      <input class="w-full sm:max-w-sm lg:max-w-lg bg-white px-2 py-1 rounded-sm" type="search" name="search" id="search-bar" placeholder="Pesquisar...">
+
+      <div class="sm:hidden flex items-center">
+        <span class="material-symbols-outlined">
+          menu
+        </span>
+      </div>
+
+      <div class="flex items-center">
+        <span class="material-symbols-outlined">
+          shopping_cart
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex flex-col w-full px-2 my-2 items-center">
+    <div class="w-full flex flex-col sm:max-w-xl gap-2" id="products">
+      <div class="flex flex-col w-full">
+        <div class="flex border border-gray-200 rounded-xs py-3 gap-3">
+          <div class="flex justify-center items-center w-4/10">
+            <img class="object-scale-down" src="../pngwing.com.png" alt="Placa de vídeo">
+          </div>
+  
+          <div class="flex flex-col grow w-6/10 items-start pr-2 justify-center">
+            <p class="font-bold text-justify w-full overflow-hidden text-ellipsis h-[50px]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere labore voluptatibus odit et nam id distinctio sit assumenda, iusto voluptatum culpa, vel nisi totam repellat!
+            </p>
+  
+            <div class="text-md flex items-center">
+              <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="18px" fill="#EAC452"><path d="M236.5-125 301-402 86-588l283.5-24.5 110.5-261 110.5 261L874-588 659-402l64.5 277L480-272 236.5-125Z"/></svg>
+              <div>
+                4,6 <span class="text-xs align-top text-gray-500">(611)</span>
+              </div>
+            </div>
+  
+            <p class="text-2xl flex items-center my-2">
+              <span class="text-sm align-text-top">R$</span>799<span class="text-sm align-text-top">00</span>
+            </p>
+  
+            <div class="w-full flex">
+              <button class="text-sm rounded-2xl self-center py-1 w-full mx-2 bg-orange-300">Adicionar ao carrinho</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
