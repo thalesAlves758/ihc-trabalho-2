@@ -10,8 +10,8 @@ function renderProcuts(products) {
     const cents = product.price - value * 100;
 
     return `
-      <div class="flex flex-col w-full" id="product-${product.id}">
-        <div class="flex lg:flex-col lg:w-full lg:items-center border border-gray-200 rounded-sm">
+      <div class="flex w-full" id="product-${product.id}">
+        <div class="flex w-full lg:flex-col lg:items-center border border-gray-200 rounded-sm">
           <div class="flex justify-center items-center w-4/10 lg:w-2/3">
             <img class="object-scale-down size-26 lg:size-38 xl:size-50" src="./images/${product.pictures?.[0]}" alt="${product.name}">
           </div>
