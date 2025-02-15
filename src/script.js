@@ -11,18 +11,20 @@ function renderProcuts(products) {
 
     return `
       <div class="flex flex-col w-full" id="product-${product.id}">
-        <div class="flex border border-gray-200 rounded-xs py-3 gap-3">
-          <div class="flex justify-center items-center w-4/10">
-            <img class="object-scale-down" src="" alt="${product.name}">
+        <div class="flex lg:flex-col lg:w-full lg:items-center border border-gray-200 rounded-sm">
+          <div class="flex justify-center items-center w-4/10 lg:w-2/3">
+            <img class="object-scale-down size-26 lg:size-38 xl:size-50" src="./images/${product.pictures?.[0]}" alt="${product.name}">
           </div>
 
-          <div class="flex flex-col grow w-6/10 items-start pr-2 justify-center">
-            <p class="font-bold flex items-center text-justify w-full overflow-hidden text-ellipsis h-[50px]">
+          <div class="flex flex-col grow w-6/10 items-start py-3 px-2 justify-center border-l border-l-gray-100 lg:w-full lg:border-l-0 lg:border-t lg:border-t-gray-100">
+            <p class="font-bold flex items-start w-full overflow-hidden text-ellipsis h-[50px]">
               ${product.name}
             </p>
 
             <div class="text-md flex items-center">
-              <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="18px" fill="#EAC452"><path d="M236.5-125 301-402 86-588l283.5-24.5 110.5-261 110.5 261L874-588 659-402l64.5 277L480-272 236.5-125Z"/></svg>
+              <svg class="mr-1" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="18px" fill="#EAC452">
+               <path d="M236.5-125 301-402 86-588l283.5-24.5 110.5-261 110.5 261L874-588 659-402l64.5 277L480-272 236.5-125Z"/>
+              </svg>
               <div>
                 ${String(product.rating).replace('.', ',')} <span class="text-xs align-top text-gray-500">(${product.sold_quantity})</span>
               </div>
