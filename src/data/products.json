@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Intel Core i7-12700K Processor",
+    "price": 220075,
+    "rating": 4.8,
+    "sold_quantity": 120
+  },
+  {
+    "id": 2,
+    "name": "NVIDIA GeForce RTX 3080 Graphics Card",
+    "price": 550099,
+    "rating": 4.9,
+    "sold_quantity": 85
+  },
+  {
+    "id": 3,
+    "name": "Corsair Vengeance 16GB (2x8GB) DDR4 RAM",
+    "price": 45050,
+    "rating": 4.7,
+    "sold_quantity": 200
+  },
+  {
+    "id": 4,
+    "name": "Samsung 970 EVO Plus 1TB NVMe M.2 SSD",
+    "price": 80025,
+    "rating": 4.8,
+    "sold_quantity": 150
+  },
+  {
+    "id": 5,
+    "name": "ASUS ROG Strix Z690-E Gaming WiFi Motherboard",
+    "price": 280099,
+    "rating": 4.6,
+    "sold_quantity": 90
+  },
+  {
+    "id": 6,
+    "name": "Corsair RM850x 850W 80 Plus Gold Power Supply",
+    "price": 70080,
+    "rating": 4.7,
+    "sold_quantity": 110
+  },
+  {
+    "id": 7,
+    "name": "Cooler Master Hyper 212 RGB CPU Cooler",
+    "price": 25045,
+    "rating": 4.5,
+    "sold_quantity": 300
+  },
+  {
+    "id": 8,
+    "name": "Logitech G Pro X Mechanical Gaming Keyboard",
+    "price": 60060,
+    "rating": 4.6,
+    "sold_quantity": 180
+  },
+  {
+    "id": 9,
+    "name": "Seagate Barracuda 2TB 7200RPM HDD",
+    "price": 35090,
+    "rating": 4.4,
+    "sold_quantity": 250
+  },
+  {
+    "id": 10,
+    "name": "LG UltraGear 27GL850-B 27\" 144Hz Gaming Monitor",
+    "price": 180075,
+    "rating": 4.8,
+    "sold_quantity": 70
+  }
+]
