@@ -4,69 +4,134 @@
     "name": "Intel Core i7-12700K Processor",
     "price": 220075,
     "rating": 4.8,
-    "sold_quantity": 120
+    "sold_quantity": 120,
+    "pictures": [
+      "processador-intel-core-i7-12700k.webp",
+      "processador-intel-core-i7-12700k-2.webp",
+      "processador-intel-core-i7-12700k-3.webp"
+    ]
   },
   {
     "id": 2,
     "name": "NVIDIA GeForce RTX 3080 Graphics Card",
     "price": 550099,
     "rating": 4.9,
-    "sold_quantity": 85
+    "sold_quantity": 85,
+    "pictures": [
+      "placa-de-video-gigabyte-geforce-rtx-3080.webp",
+      "placa-de-video-gigabyte-geforce-rtx-3080-2.webp",
+      "placa-de-video-gigabyte-geforce-rtx-3080-3.webp",
+      "placa-de-video-gigabyte-geforce-rtx-3080-4.webp",
+      "placa-de-video-gigabyte-geforce-rtx-3080-5.webp",
+      "placa-de-video-gigabyte-geforce-rtx-3080-6.webp",
+      "placa-de-video-gigabyte-geforce-rtx-3080-7.webp"
+    ]
   },
   {
     "id": 3,
     "name": "Corsair Vengeance 16GB (2x8GB) DDR4 RAM",
     "price": 45050,
     "rating": 4.7,
-    "sold_quantity": 200
+    "sold_quantity": 200,
+    "pictures": [
+      "memoria-corsair-vengeance-lpx-16gb-2x8gb.webp",
+      "memoria-corsair-vengeance-lpx-16gb-2x8gb-2.webp",
+      "memoria-corsair-vengeance-lpx-16gb-2x8gb-3.webp",
+      "memoria-corsair-vengeance-lpx-16gb-2x8gb-4.webp"
+    ]
   },
   {
     "id": 4,
     "name": "Samsung 970 EVO Plus 1TB NVMe M.2 SSD",
     "price": 80025,
     "rating": 4.8,
-    "sold_quantity": 150
+    "sold_quantity": 150,
+    "pictures": [
+      "samsung-970-evo-plus.webp",
+      "samsung-970-evo-plus-2.webp",
+      "samsung-970-evo-plus-3.webp",
+      "samsung-970-evo-plus-4.webp"
+    ]
   },
   {
     "id": 5,
     "name": "ASUS ROG Strix Z690-E Gaming WiFi Motherboard",
     "price": 280099,
     "rating": 4.6,
-    "sold_quantity": 90
+    "sold_quantity": 90,
+    "pictures": [
+      "rog-strix-z690-e-gaming-wifi231.jpg",
+      "rog-strix-z690-e-gaming-wifi231-2.jpg",
+      "rog-strix-z690-e-gaming-wifi231-3.jpg",
+      "rog-strix-z690-e-gaming-wifi231-4.jpg",
+      "rog-strix-z690-e-gaming-wifi231-5.jpg",
+      "rog-strix-z690-e-gaming-wifi231-6.jpg"
+    ]
   },
   {
     "id": 6,
     "name": "Corsair RM850x 850W 80 Plus Gold Power Supply",
     "price": 70080,
     "rating": 4.7,
-    "sold_quantity": 110
+    "sold_quantity": 110,
+    "pictures": [
+      "fonte-corsair-rmx-series.webp",
+      "fonte-corsair-rmx-series-2.webp",
+      "fonte-corsair-rmx-series-3.webp",
+      "fonte-corsair-rmx-series-4.webp",
+      "fonte-corsair-rmx-series-5.webp"
+    ]
   },
   {
     "id": 7,
     "name": "Cooler Master Hyper 212 RGB CPU Cooler",
     "price": 25045,
     "rating": 4.5,
-    "sold_quantity": 300
+    "sold_quantity": 300,
+    "pictures": [
+      "cooler-para-processador-cooler-master-hyper-212.webp",
+      "cooler-para-processador-cooler-master-hyper-212-2.webp",
+      "cooler-para-processador-cooler-master-hyper-212-3.webp",
+      "cooler-para-processador-cooler-master-hyper-212-4.webp"
+    ]
   },
   {
     "id": 8,
     "name": "Logitech G Pro X Mechanical Gaming Keyboard",
     "price": 60060,
     "rating": 4.6,
-    "sold_quantity": 180
+    "sold_quantity": 180,
+    "pictures": [
+      "teclado-gamer-sem-fio-logitech-g-pro-x.webp",
+      "teclado-gamer-sem-fio-logitech-g-pro-x-2.webp",
+      "teclado-gamer-sem-fio-logitech-g-pro-x-3.webp",
+      "teclado-gamer-sem-fio-logitech-g-pro-x-4.webp",
+      "teclado-gamer-sem-fio-logitech-g-pro-x-5.webp"
+    ]
   },
   {
     "id": 9,
     "name": "Seagate Barracuda 2TB 7200RPM HDD",
     "price": 35090,
     "rating": 4.4,
-    "sold_quantity": 250
+    "sold_quantity": 250,
+    "pictures": [
+      "HD-seagate-barracuda.webp",
+      "HD-seagate-barracuda-2.webp",
+      "HD-seagate-barracuda-3.webp"
+    ]
   },
   {
     "id": 10,
     "name": "LG UltraGear 27GL850-B 27\" 144Hz Gaming Monitor",
     "price": 180075,
     "rating": 4.8,
-    "sold_quantity": 70
+    "sold_quantity": 70,
+    "pictures": [
+      "lg-ultragear-144hz.webp",
+      "lg-ultragear-144hz-2.webp",
+      "lg-ultragear-144hz-3.webp",
+      "lg-ultragear-144hz-4.webp"
+    ]
   }
 ]
