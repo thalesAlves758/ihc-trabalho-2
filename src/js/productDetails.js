@@ -43,26 +43,20 @@ function initializeProductDetailsListeners() {
     });
   });
 
-  // Botão "Comprar" (mantém funcionalidade atual)
   buyProductButton.addEventListener('click', () => {
     alert('Funcionalidade ainda não implementada');
   });
 
-  // Botão "Adicionar ao carrinho"
   const addToCartButton = document.getElementById('button-add-to-cart');
   if (addToCartButton) {
     addToCartButton.addEventListener('click', () => {
-      // Obtém a quantidade selecionada
       const selectedAmount = parseInt(amountSelect.value) || 1;
 
-      // Se a função global addToCart estiver definida, utiliza-a
       if (typeof window.addToCart === 'function') {
-        // Caso a função adicione apenas 1 unidade por chamada, chama-la em loop
         for (let i = 0; i < selectedAmount; i++) {
           window.addToCart(product.id);
         }
       } else {
-        // Se não estiver disponível, implementa a lógica localmente
         let shoppingCart = getPropertyFromSessionStorage('shoppingCart', []);
         const productInCartIndex = shoppingCart.findIndex(item => item.productId === product.id);
         if (productInCartIndex > -1) {
