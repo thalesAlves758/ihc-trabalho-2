@@ -45,19 +45,21 @@
       <div class="flex flex-col w-full sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
         <h1 class="text-2xl font-bold mb-4">Carrinho de Compras</h1>
         
-        <!-- Área onde os itens do carrinho serão renderizados -->
-        <div id="cart-items" class="flex flex-col gap-3">
-          <!-- Itens do carrinho aparecerão aqui -->
-        </div>
+        <div class="flex justify-between gap-3">
+            <!-- Área onde os itens do carrinho serão renderizados -->
+            <div id="cart-items" class="flex flex-col gap-3">
+            <!-- Itens do carrinho aparecerão aqui -->
+            </div>
 
-        <!-- Resumo do carrinho -->
-        <div id="cart-summary" class="mt-4">
-          <p class="text-xl font-semibold">
-            Total: <span id="cart-total"></span>
-          </p>
-          <button id="checkout-button" class="mt-2 w-full text-sm rounded-2xl py-2 bg-orange-300 font-bold hover:cursor-pointer">
-            Finalizar Compra
-          </button>
+            <!-- Resumo do carrinho -->
+            <div id="cart-summary" class="mt-4">
+            <p class="text-xl font-semibold">
+                Total: <span id="cart-total"></span>
+            </p>
+            <button id="checkout-button" class="mt-2 w-full text-sm rounded-2xl py-2 bg-orange-300 font-bold hover:cursor-pointer">
+                Finalizar Compra
+            </button>
+            </div>
         </div>
       </div>
     </main>

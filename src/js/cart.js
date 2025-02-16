@@ -50,7 +50,7 @@ function renderCart() {
     const imgContainer = document.createElement('div');
     imgContainer.className = "w-1/4 flex justify-center items-center hover:cursor-pointer";
     const img = document.createElement('img');
-    img.className = "object-scale-down";
+    img.className = "w-32 h-32 object-scale-down";
     img.src = `./src/images/${product.pictures[0]}`;
     img.alt = product.name;
     imgContainer.appendChild(img);
