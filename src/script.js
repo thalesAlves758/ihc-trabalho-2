@@ -1,13 +1,21 @@
 import products from './data/products.json' with { type: "json" };
 
+const searchQuery = new URLSearchParams(window.location.search);
+
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
 const productsElement = document.getElementById('products');
 const cartCounterElement = document.getElementById('shopping-cart-counter');
 
-initializeWindowFunctions();
+if (searchQuery.get('q')) {
+  searchInput.value = searchQuery.get('q');
+}
+
+initializeListeners();
 renderProducts(products);
 updateCartCounter();
 
-function initializeWindowFunctions() {
+function initializeListeners() {
   window.addToCart = productId => {
     const shoppingCart = getPropertyFromSessionStorage('shoppingCart', []);
 
@@ -36,6 +44,16 @@ function initializeWindowFunctions() {
     renderProducts(products);
     updateCartCounter();
   }
+
+  searchButton.addEventListener('click', () => {
+    const search = searchInput.value;
+
+    if (search) {
+      window.location.search = 'q=' + search;
+    } else {
+      window.location.href = window.location.origin + window.location.pathname;
+    }
+  });
 }
 
 function renderProducts(products) {
@@ -46,11 +64,17 @@ function renderProducts(products) {
     return map;
   }, {});
 
-  productsElement.innerHTML = products?.map(product => {
-    const value = parseInt(product.price / 100);
-    const cents = product.price - value * 100;
+  productsElement.innerHTML = products
+    ?.filter(product => {
+      if (!window.location.search || !searchQuery.size || !searchQuery.get('q')) return true;
 
-    return `
+      return product.name.toLowerCase().includes(searchQuery.get('q').toLowerCase());
+    })
+    .map(product => {
+      const value = parseInt(product.price / 100);
+      const cents = product.price - value * 100;
+
+      return `
       <div class="flex w-full" id="product-${product.id}">
         <div class="flex w-full lg:flex-col lg:items-center border border-gray-200 rounded-sm">
           <div class="flex justify-center items-center w-4/10 lg:w-2/3">
@@ -86,7 +110,7 @@ function renderProducts(products) {
         </div>
       </div>
     `;
-  }).join('');
+    }).join('');
 }
 
 function updateCartCounter() {

@@ -15,7 +15,14 @@
     <div class="flex justify-between items-center px-3 w-full gap-3 sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
       <span>Logo</span>
 
-      <input class="w-full sm:max-w-sm lg:max-w-lg bg-white px-2 py-1 rounded-sm" type="search" name="search" id="search-bar" placeholder="Pesquisar...">
+      <div class="flex w-full items-stretch sm:max-w-sm lg:max-w-lg">
+        <input class="w-full bg-white px-2 py-1 rounded-l-sm outline-none" type="search" name="search" id="search-input" placeholder="Pesquisar...">
+        <div class="bg-gray-200 flex justify-center items-center rounded-r-sm p-2 hover:cursor-pointer" id="search-button">
+          <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#000000">
+            <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+          </svg>
+        </div>
+      </div>
 
       <div class="sm:hidden flex items-center">
         <span class="material-symbols-outlined">
