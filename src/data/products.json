@@ -5,6 +5,7 @@
     "price": 220075,
     "rating": 4.8,
     "sold_quantity": 120,
+    "reviews_count": 95,
     "pictures": [
       "processador-intel-core-i7-12700k.webp",
       "processador-intel-core-i7-12700k-2.webp",
@@ -17,6 +18,7 @@
     "price": 550099,
     "rating": 4.9,
     "sold_quantity": 85,
+    "reviews_count": 70,
     "pictures": [
       "placa-de-video-gigabyte-geforce-rtx-3080.webp",
       "placa-de-video-gigabyte-geforce-rtx-3080-2.webp",
@@ -33,6 +35,7 @@
     "price": 45050,
     "rating": 4.7,
     "sold_quantity": 200,
+    "reviews_count": 150,
     "pictures": [
       "memoria-corsair-vengeance-lpx-16gb-2x8gb.webp",
       "memoria-corsair-vengeance-lpx-16gb-2x8gb-2.webp",
@@ -46,6 +49,7 @@
     "price": 80025,
     "rating": 4.8,
     "sold_quantity": 150,
+    "reviews_count": 120,
     "pictures": [
       "samsung-970-evo-plus.webp",
       "samsung-970-evo-plus-2.webp",
@@ -59,6 +63,7 @@
     "price": 280099,
     "rating": 4.6,
     "sold_quantity": 90,
+    "reviews_count": 75,
     "pictures": [
       "rog-strix-z690-e-gaming-wifi231.jpg",
       "rog-strix-z690-e-gaming-wifi231-2.jpg",
@@ -74,6 +79,7 @@
     "price": 70080,
     "rating": 4.7,
     "sold_quantity": 110,
+    "reviews_count": 90,
     "pictures": [
       "fonte-corsair-rmx-series.webp",
       "fonte-corsair-rmx-series-2.webp",
@@ -88,6 +94,7 @@
     "price": 25045,
     "rating": 4.5,
     "sold_quantity": 300,
+    "reviews_count": 250,
     "pictures": [
       "cooler-para-processador-cooler-master-hyper-212.webp",
       "cooler-para-processador-cooler-master-hyper-212-2.webp",
@@ -101,6 +108,7 @@
     "price": 60060,
     "rating": 4.6,
     "sold_quantity": 180,
+    "reviews_count": 140,
     "pictures": [
       "teclado-gamer-sem-fio-logitech-g-pro-x.webp",
       "teclado-gamer-sem-fio-logitech-g-pro-x-2.webp",
@@ -115,6 +123,7 @@
     "price": 35090,
     "rating": 4.4,
     "sold_quantity": 250,
+    "reviews_count": 200,
     "pictures": [
       "HD-seagate-barracuda.webp",
       "HD-seagate-barracuda-2.webp",
@@ -127,6 +136,7 @@
     "price": 180075,
     "rating": 4.8,
     "sold_quantity": 70,
+    "reviews_count": 50,
     "pictures": [
       "lg-ultragear-144hz.webp",
       "lg-ultragear-144hz-2.webp",

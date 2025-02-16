@@ -94,7 +94,7 @@ function renderProducts(products) {
                   ${renderStarsByRating(product.rating)}
                 </div>
                 <div>
-                  <span class="text-xs align-top text-gray-500">(${product.sold_quantity})</span>
+                  <span class="text-xs align-top text-gray-500">(${product.reviews_count})</span>
                 </div>
               </div>
 
