@@ -45,6 +45,10 @@ function initializeListeners() {
     updateCartCounter();
   }
 
+  window.navigateToProduct = productId => {
+    window.location.href = `${window.location.origin}/productDetails.html?productId=${productId}`;
+  }
+
   searchButton.addEventListener('click', () => {
     const search = searchInput.value;
 
@@ -77,12 +81,12 @@ function renderProducts(products) {
       return `
         <div class="flex w-full" id="product-${product.id}">
           <div class="flex w-full lg:flex-col lg:items-center border border-gray-200 rounded-sm">
-            <div class="flex justify-center items-center w-4/10 lg:w-2/3">
-              <img class="object-scale-down size-26 lg:size-38 xl:size-50" src="./images/${product.pictures?.[0]}" alt="${product.name}">
+            <div class="flex justify-center items-center w-4/10 lg:w-2/3 hover:cursor-pointer" onclick="navigateToProduct(${product.id})">
+              <img class="object-scale-down size-26 lg:size-38 xl:size-50" src="./src/images/${product.pictures?.[0]}" alt="${product.name}">
             </div>
 
             <div class="flex flex-col grow w-6/10 items-start py-3 px-2 justify-center border-l border-l-gray-100 lg:w-full lg:border-l-0 lg:border-t lg:border-t-gray-100">
-              <p class="font-bold flex items-start w-full overflow-hidden text-ellipsis h-[50px]">
+              <p class="font-bold flex items-start w-full overflow-hidden text-ellipsis h-[50px] hover:cursor-pointer hover:underline" onclick="navigateToProduct(${product.id})">
                 ${product.name}
               </p>
 
