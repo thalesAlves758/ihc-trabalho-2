@@ -53,6 +53,9 @@ function renderCart() {
     img.className = "w-32 h-32 object-scale-down";
     img.src = `./src/images/${product.pictures[0]}`;
     img.alt = product.name;
+    img.onclick = () => {
+        window.location.href = `${window.location.origin}/productDetails.html?productId=${product.id}`;
+      };
     imgContainer.appendChild(img);
 
     // Informações do produto
@@ -84,7 +87,7 @@ function renderCart() {
 
     // Botão para remover o item
     const removeButton = document.createElement('button');
-    removeButton.className = "text-sm text-red-500 mt-2 hover:underline";
+    removeButton.className = "text-sm text-red-500 mt-2 hover:underline hover:cursor-pointer";
     removeButton.textContent = "Remover";
     removeButton.onclick = () => {
       removeFromCart(product.id);
