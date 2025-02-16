@@ -1,19 +1,9 @@
-import products from './data/products.json' with { type: "json" };
+import products from '../data/products.json' with { type: "json" };
 
-const searchQuery = new URLSearchParams(window.location.search);
-
-const searchInput = document.getElementById('search-input');
-const searchButton = document.getElementById('search-button');
 const productsElement = document.getElementById('products');
-const cartCounterElement = document.getElementById('shopping-cart-counter');
-
-if (searchQuery.get('q')) {
-  searchInput.value = searchQuery.get('q');
-}
 
 initializeListeners();
 renderProducts(products);
-updateCartCounter();
 
 function initializeListeners() {
   window.addToCart = productId => {
@@ -48,16 +38,6 @@ function initializeListeners() {
   window.navigateToProduct = productId => {
     window.location.href = `${window.location.origin}/productDetails.html?productId=${productId}`;
   }
-
-  searchButton.addEventListener('click', () => {
-    const search = searchInput.value;
-
-    if (search) {
-      window.location.search = 'q=' + search;
-    } else {
-      window.location.href = window.location.origin + window.location.pathname;
-    }
-  });
 }
 
 function renderProducts(products) {
@@ -140,22 +120,4 @@ function renderStarsByRating(rating) {
     ...Array(semiFilledStars).fill(semiFilledStarSvg),
     ...Array(emptyStars).fill(emptyStarSvg)
   ].join('');
-}
-
-function updateCartCounter() {
-  const shoppingCart = getPropertyFromSessionStorage('shoppingCart', []);
-
-  if (shoppingCart.length) {
-    cartCounterElement.innerText = shoppingCart.length > 9 ? '9+' : shoppingCart.length;
-  } else {
-    cartCounterElement.innerText = '';
-  }
-}
-
-function getPropertyFromSessionStorage(key, defaultValue) {
-  return sessionStorage.getItem(key) ? JSON.parse(sessionStorage.getItem(key)) : defaultValue;
-}
-
-function savePropertyInSessionStorage(key, value) {
-  sessionStorage.setItem(key, JSON.stringify(value));
 }
