@@ -3,12 +3,29 @@ import products from '../data/products.json' with { type: "json" };
 const cartItemsContainer = document.getElementById('cart-items');
 const cartTotalElement = document.getElementById('cart-total');
 const checkoutButton = document.getElementById('checkout-button');
+const userInfoContainer = document.getElementById('user-info');
 
 // Função para remover item do carrinho
 function removeFromCart(productId) {
   const shoppingCart = getPropertyFromSessionStorage('shoppingCart', []);
   const updatedCart = shoppingCart.filter(cartItem => cartItem.productId !== productId);
   savePropertyInSessionStorage('shoppingCart', updatedCart);
+}
+
+// Função para renderizar as informações do usuário
+function renderUserInfo() {
+  const account = getPropertyFromSessionStorage('account', {
+    name: 'Fulano de Tal',
+    email: 'fulano@example.com',
+    address: 'Rua Exemplo, 123'
+  });
+
+  userInfoContainer.innerHTML = `
+    <p class="font-semibold mb-1">Informações do Usuário:</p>
+    <p><span class="font-bold">Nome:</span> ${account.name}</p>
+    <p><span class="font-bold">Email:</span> ${account.email}</p>
+    <p><span class="font-bold">Endereço:</span> ${account.address}</p>
+  `;
 }
 
 // Renderiza os itens do carrinho
@@ -54,8 +71,8 @@ function renderCart() {
     img.src = `./src/images/${product.pictures[0]}`;
     img.alt = product.name;
     img.onclick = () => {
-        window.location.href = `${window.location.origin}/productDetails.html?productId=${product.id}`;
-      };
+      window.location.href = `${window.location.origin}/productDetails.html?productId=${product.id}`;
+    };
     imgContainer.appendChild(img);
 
     // Informações do produto
@@ -111,5 +128,6 @@ checkoutButton.addEventListener('click', () => {
   alert("Funcionalidade de finalização de compra ainda não implementada.");
 });
 
-// Renderiza o carrinho ao carregar a página
+// Renderiza as informações do usuário e o carrinho ao carregar a página
+renderUserInfo();
 renderCart();

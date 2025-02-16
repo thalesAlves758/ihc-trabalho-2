@@ -36,57 +36,61 @@
         
             <div class="flex items-center gap-2">
             <!-- Ícone do carrinho -->
-            <div class="flex items-center relative p-2">
-                <span class="material-symbols-outlined">
-                shopping_cart
-                </span>
-                <span id="shopping-cart-counter" class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
-            </div>
-        
-            <!-- Menu de usuário -->
-            <div class="relative p-2">
-                <a href="cart.html" class="flex items-center relative p-2">
+              <div class="flex items-center relative">
+                  <a href="cart.html" class="flex items-center relative p-2">
                     <span class="material-symbols-outlined">shopping_cart</span>
                     <span id="shopping-cart-counter" class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
-                </a>     
-                <!-- Dropdown -->
-                <div id="user-menu-dropdown" class="hidden absolute right-0 mt-2 w-100 bg-white shadow-lg rounded">
-                <ul class="py-1">
-                    <li>
-                    <a href="orders.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Meus Pedidos</a>
-                    </li>
-                    <li>
-                    <a href="account.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Minha Conta</a>
-                    </li>
-                    <li>
-                    <a href="#" id="logout" class="block px-4 py-2 text-sm hover:bg-gray-100">Logout</a>
-                    </li>
-                </ul>
-                </div>
-            </div>
+                  </a>     
+                  <span id="shopping-cart-counter" class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+              </div>
+          
+              <!-- Menu de usuário -->
+              <div class="relative p-2">
+                  <span id="user-menu-button" class="material-symbols-outlined hover:cursor-pointer">
+                  account_circle
+                  </span>
+                  <!-- Dropdown -->
+                  <div id="user-menu-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded">
+                  <ul class="py-1">
+                      <li>
+                      <a href="orders.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Meus Pedidos</a>
+                      </li>
+                      <li>
+                      <a href="account.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Minha Conta</a>
+                      </li>
+                      <li>
+                      <a href="#" id="logout" class="block px-4 py-2 text-sm hover:bg-gray-100">Logout</a>
+                      </li>
+                  </ul>
+                  </div>
+              </div>
             </div>
         </div>
-    </header>      
+    </header>  
 
     <main class="w-full px-2 my-2 mb-10 flex flex-col items-center">
       <div class="flex flex-col w-full sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
         <h1 class="text-2xl font-bold mb-4">Carrinho de Compras</h1>
         
         <div class="flex justify-between gap-3">
-            <!-- Área onde os itens do carrinho serão renderizados -->
-            <div id="cart-items" class="flex flex-col gap-3">
+          <!-- Área onde os itens do carrinho serão renderizados -->
+          <div id="cart-items" class="flex flex-col gap-3">
             <!-- Itens do carrinho aparecerão aqui -->
-            </div>
+          </div>
 
-            <!-- Resumo do carrinho -->
-            <div id="cart-summary" class="mt-4">
+          <!-- Resumo do carrinho -->
+          <div id="cart-summary" class="border border-gray-200 rounded-sm h-fit p-10">
+            <!-- Informações do usuário -->
+            <div id="user-info" class="mb-4 p-3">
+              <!-- Dados do usuário serão inseridos aqui via JS -->
+            </div>
             <p class="text-xl font-semibold">
-                Total: <span id="cart-total"></span>
+              Total: <span id="cart-total"></span>
             </p>
             <button id="checkout-button" class="mt-2 w-full text-sm rounded-2xl py-2 bg-orange-300 font-bold hover:cursor-pointer">
-                Finalizar Compra
+              Finalizar Compra
             </button>
-            </div>
+          </div>
         </div>
       </div>
     </main>
