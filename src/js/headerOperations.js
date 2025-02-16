@@ -1,6 +1,6 @@
+const searchQuery = new URLSearchParams(window.location.search);
 
 const cartCounterElement = document.getElementById('shopping-cart-counter');
-const searchQuery = new URLSearchParams(window.location.search);
 const searchInput = document.getElementById('search-input');
 const searchButton = document.getElementById('search-button');
 
