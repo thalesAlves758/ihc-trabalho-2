@@ -45,9 +45,10 @@
         
             <!-- Menu de usuário -->
             <div class="relative p-2">
-                <span id="user-menu-button" class="material-symbols-outlined hover:cursor-pointer">
-                account_circle
-                </span>
+                <a href="cart.html" class="flex items-center relative p-2">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span id="shopping-cart-counter" class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+                </a>     
                 <!-- Dropdown -->
                 <div id="user-menu-dropdown" class="hidden absolute right-0 mt-2 w-100 bg-white shadow-lg rounded">
                 <ul class="py-1">
