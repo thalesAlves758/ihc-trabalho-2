@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="./src/output.css" rel="stylesheet">
+    <script src="./src/js/scripts.js"></script>
+    <script src="./src/js/headerOperations.js" defer></script>
+</head>
+
+<body>
+    <header class="h-18 bg-orange-300 w-full flex justify-center items-center border-b border-gray-300">
+        <div class="flex justify-between items-center px-3 w-full gap-3 sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
+            <div class="sm:hidden flex items-center">
+                <span id="menu-button" class="material-symbols-outlined cursor-pointer">menu</span>
+            </div>
+            <span>Logo</span>
+
+            <div class="flex w-full items-stretch sm:max-w-sm lg:max-w-lg">
+                <input class="w-full bg-white px-2 py-1 rounded-l-sm outline-none" type="search" name="search"
+                    id="search-input" placeholder="Pesquisar...">
+                <div class="bg-gray-200 flex justify-center items-center rounded-r-sm p-2 hover:cursor-pointer"
+                    id="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px"
+                        fill="#000000">
+                        <path
+                            d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                    </svg>
+                </div>
+            </div>
+
+
+            <div class="hidden sm:flex flex-col p-4 mt-4 bg-green-200">
+                <a href="/login.html" class="text-gray-800">Login</a>
+                <a href="/sobre.html" class="text-gray-800">Sobre nós</a>
+            </div>
+
+            <div class="sm:hidden hidden flex-col p-4 mt-4 bg-green-200" id="menu-opções">
+                <a href="/login.html" class="block py-2 px-3 text-gray-800">Login</a>
+                <a href="/sobre.html" class="block py-2 px-3 text-gray-800">Sobre nós</a>
+            </div>
+
+            <div class="flex items-center relative p-2">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <span id="shopping-cart-counter"
+                    class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-end">
+        <div class="bg-white w-64 h-full flex flex-col shadow-lg">
+            <button id="close-menu" class="self-end p-4">✖</button>
+            <nav class="flex flex-col items-start p-4 gap-4">
+                <a href="/index.html" class="w-full text-4x1 py-2 mx-2 text-orange-400 font-bold mt-12">Home</a>
+                <a href="/login.html" class="w-full text-4x1 py-2 mx-2 text-orange-400 font-bold mt-12">Login</a>
+                <a href="/sobre.html" class="w-full text-4x1 py-2 mx-2 text-orange-400 font-bold mt-12">Sobre nós</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="flex flex-col w-full px-2 my-12 items-center">
+        <div class="w-full sm:max-w-md lg:max-w-lg xl:max-w-xl bg-white p-6 rounded-lg shadow-lg mt-12"><br>
+            <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">CADASTRAR</h2><br>
+            <form action="/registrar" method="post">
+                <!-- Nome Completo -->
+                <div class="mb-4">
+                    <label for="nome" class="block text-gray-600">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                        placeholder="Digite seu nome completo" required>
+                </div>
+
+                <!-- E-mail -->
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-600">E-mail</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Digite seu e-mail"
+                        required>
+                </div>
+
+                <!-- Senha -->
+                <div class="mb-4">
+                    <label for="senha" class="block text-gray-600">Senha</label>
+                    <input type="password" id="senha" name="senha"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Digite sua senha"
+                        required>
+                </div>
+
+                <!-- Confirmar Senha -->
+                <div class="mb-6">
+                    <label for="confirmar-senha" class="block text-gray-600">Confirmar Senha</label>
+                    <input type="password" id="confirmar-senha" name="confirmar-senha"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Confirme sua senha"
+                        required>
+                </div>
+
+                <!-- Telefone -->
+                <div class="mb-4">
+                    <label for="telefone" class="block text-gray-600">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Digite seu telefone"
+                        required>
+                </div>
+
+                <!-- Endereço -->
+                <div class="mb-4">
+                    <label for="endereco" class="block text-gray-600">Endereço</label>
+                    <input type="text" id="endereco" name="endereco"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Digite seu endereço"
+                        required>
+                </div>
+
+                <!-- Numero -->
+                <div class="mb-4">
+                    <label for="numero" class="block text-gray-600">Número</label>
+                    <input type="text" id="numero" name="numero"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Digite seu número"
+                        required>
+                </div>
+
+                <!-- Cidade -->
+                <div class="mb-4">
+                    <label for="cidade" class="block text-gray-600">Cidade</label>
+                    <input type="text" id="cidade" name="cidade"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Digite sua cidade"
+                        required>
+                </div>
+
+                <!-- Estado -->
+                <div class="mb-4">
+                    <label for="estado" class="block text-gray-600">Estado</label>
+                    <input type="text" id="estado" name="estado"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Digite seu estado"
+                        required>
+                </div>
+
+                <!-- CEP -->
+                <div class="mb-6">
+                    <label for="cep" class="block text-gray-600">CEP</label>
+                    <input type="text" id="cep" name="cep" class="w-full px-3 py-2 border border-gray-300 rounded-md"
+                        placeholder="Digite seu CEP" required>
+                </div><br>
+
+                <button type="submit"
+                    class="w-full bg-orange-300 text-white py-2 rounded-md hover:bg-orange-400 transition duration-300">Cadastrar</button>
+            </form>
+
+            <div class="text-center mt-4">
+                <p class="text-gray-600">Já tem uma conta? <a href="/login.html"
+                        class="text-orange-500 hover:underline">Fazer login</a></p><br>
+            </div>
+        
+            <button class="w-full text-sm rounded-2xl py-2 mx-2 bg-orange-100 text-orange-400 font-bold mt-12">
+                <a href="/index.html" class="w-full text-sm rounded-2xl py-2 mx-2 bg-orange-100 text-orange-400 font-bold mt-12">Voltar</a>
+            </button>
+        </div>
+    </main>
+</body>
+
+</html>
