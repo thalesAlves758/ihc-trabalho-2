@@ -35,35 +35,36 @@
         </span>
         </div>
     
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-2">
         <!-- Ícone do carrinho -->
-        <div class="flex items-center relative p-2">
-            <span class="material-symbols-outlined">
-            shopping_cart
-            </span>
-            <span id="shopping-cart-counter" class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
-        </div>
-    
-        <!-- Menu de usuário -->
-        <div class="relative p-2">
-            <span id="user-menu-button" class="material-symbols-outlined hover:cursor-pointer">
-            account_circle
-            </span>
-            <!-- Dropdown -->
-            <div id="user-menu-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded">
-            <ul class="py-1">
-                <li>
-                <a href="orders.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Meus Pedidos</a>
-                </li>
-                <li>
-                <a href="account.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Minha Conta</a>
-                </li>
-                <li>
-                <a href="#" id="logout" class="block px-4 py-2 text-sm hover:bg-gray-100">Logout</a>
-                </li>
-            </ul>
-            </div>
-        </div>
+          <div class="flex items-center relative">
+              <a href="cart.html" class="flex items-center relative p-2">
+                <span class="material-symbols-outlined">shopping_cart</span>
+                <span id="shopping-cart-counter" class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+              </a>     
+              <span id="shopping-cart-counter" class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+          </div>
+      
+          <!-- Menu de usuário -->
+          <div class="relative p-2">
+              <span id="user-menu-button" class="material-symbols-outlined hover:cursor-pointer">
+              account_circle
+              </span>
+              <!-- Dropdown -->
+              <div id="user-menu-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded">
+              <ul class="py-1">
+                  <li>
+                  <a href="orders.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Meus Pedidos</a>
+                  </li>
+                  <li>
+                  <a href="account.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Minha Conta</a>
+                  </li>
+                  <li>
+                  <a href="#" id="logout" class="block px-4 py-2 text-sm hover:bg-gray-100">Logout</a>
+                  </li>
+              </ul>
+              </div>
+          </div>
         </div>
     </div>
   </header>  
