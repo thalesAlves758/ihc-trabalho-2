@@ -118,6 +118,8 @@ function updateCartCounter() {
 
   if (shoppingCart.length) {
     cartCounterElement.innerText = shoppingCart.length > 9 ? '9+' : shoppingCart.length;
+  } else {
+    cartCounterElement.innerText = '';
   }
 }
 
