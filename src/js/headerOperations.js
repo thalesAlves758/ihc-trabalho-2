@@ -17,6 +17,23 @@ function initializeHeaderListeners() {
 
     window.location.href = search ? ('index.html?q=' + search) : '/index.html';
   });
+
+  // Seleciona os elementos do menu de usuário
+  const userMenuButton = document.getElementById('user-menu-button');
+  const userMenuDropdown = document.getElementById('user-menu-dropdown');
+
+  if (userMenuButton) {
+    userMenuButton.addEventListener('click', () => {
+      userMenuDropdown.classList.toggle('hidden');
+    });
+
+    // Opcional: fecha o dropdown ao clicar fora
+    window.addEventListener('click', (e) => {
+      if (!userMenuButton.contains(e.target) && !userMenuDropdown.contains(e.target)) {
+        userMenuDropdown.classList.add('hidden');
+      }
+     });
+    }
 }
 
 function updateCartCounter() {
