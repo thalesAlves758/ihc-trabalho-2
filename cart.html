@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link href="./src/output.css" rel="stylesheet">
+
+    <script src="./src/js/scripts.js"></script>
+    <script src="./src/js/headerOperations.js" defer></script>
+    <script src="./src/js/cart.js" type="module" defer></script>
+  </head>
+  <body>
+    <header class="h-18 bg-orange-300 w-full flex justify-center items-center border-b border-gray-300">
+      <div class="flex justify-between items-center px-3 w-full gap-3 sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
+        <span>Logo</span>
+
+        <div class="flex w-full items-stretch sm:max-w-sm lg:max-w-lg">
+          <input class="w-full bg-white px-2 py-1 rounded-l-sm outline-none" type="search" name="search" id="search-input" placeholder="Pesquisar...">
+          <div class="bg-gray-200 flex justify-center items-center rounded-r-sm p-2 hover:cursor-pointer" id="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#000000">
+              <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="sm:hidden flex items-center">
+          <span class="material-symbols-outlined">
+            menu
+          </span>
+        </div>
+
+        <div class="flex items-center relative p-2">
+          <span class="material-symbols-outlined">
+            shopping_cart
+          </span>
+          <span id="shopping-cart-counter" class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+        </div>
+      </div>
+    </header>
+
+    <main class="w-full px-2 my-2 flex flex-col items-center">
+      <div class="flex flex-col w-full sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
+        <h1 class="text-2xl font-bold mb-4">Carrinho de Compras</h1>
+        
+        <!-- Área onde os itens do carrinho serão renderizados -->
+        <div id="cart-items" class="flex flex-col gap-3">
+          <!-- Itens do carrinho aparecerão aqui -->
+        </div>
+
+        <!-- Resumo do carrinho -->
+        <div id="cart-summary" class="mt-4">
+          <p class="text-xl font-semibold">
+            Total: <span id="cart-total"></span>
+          </p>
+          <button id="checkout-button" class="mt-2 w-full text-sm rounded-2xl py-2 bg-orange-300 font-bold hover:cursor-pointer">
+            Finalizar Compra
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
