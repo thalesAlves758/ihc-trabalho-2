@@ -40,21 +40,17 @@ if (orders.length === 0) {
   orders = exampleOrders;
 }
 
-// Renderiza os pedidos na tela
 if (orders.length === 0) {
   ordersListElement.innerHTML = `<p class="text-center">Você não possui pedidos.</p>`;
 } else {
   orders.forEach(order => {
-    // Container do pedido
     const orderContainer = document.createElement('div');
     orderContainer.className = "border border-gray-200 rounded p-4";
 
-    // Cabeçalho do pedido (ID e data)
     const orderHeader = document.createElement('div');
     orderHeader.className = "flex justify-between items-center mb-2";
     orderHeader.innerHTML = `<span class="font-bold">Pedido #${order.id}</span><span>${order.date}</span>`;
 
-    // Lista dos itens do pedido
     const itemsList = document.createElement('div');
     itemsList.className = "flex flex-col gap-2";
 
@@ -62,13 +58,11 @@ if (orders.length === 0) {
       const product = products.find(p => p.id === item.productId);
       if (!product) return;
 
-      // Cálculo do subtotal do item
       const itemTotalCents = product.price * item.amount;
       const itemTotalValue = parseInt(itemTotalCents / 100);
       const itemTotalCentsRemainder = itemTotalCents - itemTotalValue * 100;
       const itemTotalFormatted = `R$ ${itemTotalValue},${itemTotalCentsRemainder.toString().padStart(2, '0')}`;
 
-      // Cria elemento para o item
       const itemElement = document.createElement('div');
       itemElement.className = "flex justify-between";
       itemElement.innerHTML = `<span>${product.name} (x${item.amount})</span><span>${itemTotalFormatted}</span>`;
@@ -76,14 +70,12 @@ if (orders.length === 0) {
       itemsList.appendChild(itemElement);
     });
 
-    // Exibe o total do pedido
     const orderTotal = document.createElement('p');
     orderTotal.className = "text-right font-bold mt-2";
     const totalValue = parseInt(order.total / 100);
     const totalCents = order.total - totalValue * 100;
     orderTotal.textContent = `Total: R$ ${totalValue},${totalCents.toString().padStart(2, '0')}`;
 
-    // Monta o container do pedido
     orderContainer.append(orderHeader, itemsList, orderTotal);
     ordersListElement.appendChild(orderContainer);
   });
