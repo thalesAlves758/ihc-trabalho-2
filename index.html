@@ -17,12 +17,9 @@
 <body>
   <header class="h-18 bg-orange-300 w-full flex justify-center items-center border-b border-gray-300">
     <div class="flex justify-between items-center px-3 w-full gap-3 sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
-
-      <!-- Ícone do menu hambúrguer (aparece apenas em telas menores) -->
-      <div class="sm:hidden flex items-center">
-        <span id="menu-button" class="material-symbols-outlined cursor-pointer">menu</span>
-      </div>
-      <span>Logo</span>
+      <a href="index.html">
+        <img src="src/images/Logo.png" alt="Logo" class="h-10">
+      </a>
 
       <div class="flex w-full items-stretch sm:max-w-sm lg:max-w-lg">
         <input class="w-full bg-white px-2 py-1 rounded-l-sm outline-none" type="search" name="search" id="search-input"
@@ -36,37 +33,47 @@
         </div>
       </div>
 
-      <!-- Container dos links do menu visíveis em telas grandes -->
-      <div class="hidden sm:flex flex-col p-4 mt-4 bg-green-200">
-        <a href="/login.html" class="text-gray-800">Login</a>
-        <a href="/sobre.html" class="text-gray-800">Sobre nós</a>
-      </div>
+      <div class="flex items-center gap-2">
+        <!-- Ícone do carrinho -->
+        <div class="flex items-center relative">
+          <a href="cart.html" class="flex items-center relative p-2">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <span id="shopping-cart-counter"
+              class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+          </a>
+          <span id="shopping-cart-counter"
+            class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+        </div>
 
-      <!-- Menu para telas pequenas -->
-      <div class="sm:hidden hidden flex-col p-4 mt-4 bg-green-200" id="menu-opcoes">
-        <a href="/login.html" class="block py-2 px-3 text-gray-800">Login</a>
-        <a href="/sobre.html" class="block py-2 px-3 text-gray-800">Sobre nós</a>
-      </div>
-
-      <!-- Ícone do carrinho -->
-      <div class="flex items-center relative p-2">
-        <span class="material-symbols-outlined">shopping_cart</span>
-        <span id="shopping-cart-counter"
-          class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+        <!-- Menu de usuário -->
+        <div class="flex relative p-2">
+          <span id="user-menu-button" class="material-symbols-outlined hover:cursor-pointer">
+            account_circle
+          </span>
+          <!-- Dropdown -->
+          <div id="user-menu-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded">
+            <ul class="py-1">
+              <li>
+                <a href="login.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Login</a>
+              </li>
+              <li>
+                <a href="account.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Minha Conta</a>
+              </li>
+              <li>
+                <a href="orders.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Meus Pedidos</a>
+              </li>
+              <li>
+                <a href="sobre.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Sobre/Contato</a>
+              </li>
+              <li>
+                <a href="index.html" id="logout" class="block px-4 py-2 text-sm hover:bg-gray-100">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </header>
-
-  <!-- Menu mobile -->
-  <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-end">
-    <div class="bg-white w-64 h-full flex flex-col shadow-lg">
-      <button id="close-menu" class="self-end p-4">✖</button>
-      <nav class="flex flex-col items-start p-4 gap-4">
-        <a href="/login.html" class="w-full text-4x1 py-2 mx-2 text-orange-400 font-bold mt-12">Login</a>
-        <a href="/sobre.html" class="w-full text-4x1 py-2 mx-2 text-orange-400 font-bold mt-12">Sobre nós</a>
-      </nav>
-    </div>
-  </div>
 
   <main class="flex flex-col w-full px-2 my-2 items-center">
     <div
