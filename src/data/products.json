@@ -11,7 +11,15 @@
       "processador-intel-core-i7-12700k.webp",
       "processador-intel-core-i7-12700k-2.webp",
       "processador-intel-core-i7-12700k-3.webp"
-    ]
+    ],
+    "features": [
+      "12 núcleos e 20 threads",
+      "Frequência base de 3.6 GHz (até 5.0 GHz com Turbo Boost)",
+      "Compatível com placas mãe Intel 600 Series",
+      "Tecnologia Intel Hyper-Threading",
+      "Cache de 25 MB Intel Smart Cache"
+    ],
+    "description": "O processador Intel Core i7-12700K é uma excelente escolha para gamers e profissionais que demandam alto desempenho. Com 12 núcleos e 20 threads, ele oferece velocidade e eficiência para multitarefas pesadas e jogos exigentes. Sua arquitetura híbrida combina núcleos de desempenho e eficiência para maximizar o poder de processamento."
   },
   {
     "id": 2,
@@ -29,7 +37,15 @@
       "placa-de-video-gigabyte-geforce-rtx-3080-5.webp",
       "placa-de-video-gigabyte-geforce-rtx-3080-6.webp",
       "placa-de-video-gigabyte-geforce-rtx-3080-7.webp"
-    ]
+    ],
+    "features": [
+      "10 GB de memória GDDR6X",
+      "Arquitetura Ampere",
+      "Ray Tracing e DLSS suportados",
+      "Resfriamento avançado com três ventoinhas",
+      "Compatível com PCIe 4.0"
+    ],
+    "description": "A placa de vídeo NVIDIA GeForce RTX 3080 é projetada para oferecer desempenho excepcional em jogos e aplicações gráficas intensivas. Com a arquitetura Ampere, ela suporta Ray Tracing e DLSS, proporcionando gráficos realistas e desempenho acelerado. Ideal para gamers e criadores de conteúdo."
   },
   {
     "id": 3,
@@ -44,7 +60,15 @@
       "memoria-corsair-vengeance-lpx-16gb-2x8gb-2.webp",
       "memoria-corsair-vengeance-lpx-16gb-2x8gb-3.webp",
       "memoria-corsair-vengeance-lpx-16gb-2x8gb-4.webp"
-    ]
+    ],
+    "features": [
+      "16 GB (2x8 GB) DDR4",
+      "Velocidade de 3200 MHz",
+      "Latência CL16",
+      "Design de dissipador de calor",
+      "Compatível com Intel XMP 2.0"
+    ],
+    "description": "A memória Corsair Vengeance DDR4 oferece alto desempenho e confiabilidade para gamers e entusiastas de hardware. Com velocidade de 3200 MHz e latência CL16, ela é ideal para quem busca melhorar o desempenho do sistema em jogos e aplicações pesadas."
   },
   {
     "id": 4,
@@ -59,7 +83,15 @@
       "samsung-970-evo-plus-2.webp",
       "samsung-970-evo-plus-3.webp",
       "samsung-970-evo-plus-4.webp"
-    ]
+    ],
+    "features": [
+      "1 TB de armazenamento NVMe",
+      "Leitura de até 3500 MB/s",
+      "Gravação de até 3300 MB/s",
+      "Formato M.2 2280",
+      "Garantia de 5 anos"
+    ],
+    "description": "O SSD Samsung 970 EVO Plus é uma solução de armazenamento ultrarrápida para quem precisa de desempenho superior. Com velocidades de leitura de até 3500 MB/s e gravação de até 3300 MB/s, ele é ideal para gamers, profissionais criativos e usuários que demandam alta performance."
   },
   {
     "id": 5,
@@ -76,7 +108,15 @@
       "rog-strix-z690-e-gaming-wifi231-4.jpg",
       "rog-strix-z690-e-gaming-wifi231-5.jpg",
       "rog-strix-z690-e-gaming-wifi231-6.jpg"
-    ]
+    ],
+    "features": [
+      "Soquete LGA 1700 para Intel 12ª e 13ª geração",
+      "Suporte a DDR5",
+      "Wi-Fi 6E e Bluetooth 5.2",
+      "PCIe 5.0 e USB 3.2 Gen 2x2",
+      "Iluminação RGB Aura Sync"
+    ],
+    "description": "A placa-mãe ASUS ROG Strix Z690-E Gaming WiFi é projetada para oferecer o máximo desempenho e conectividade. Com suporte para processadores Intel de 12ª e 13ª geração, DDR5 e PCIe 5.0, ela é ideal para gamers e entusiastas que buscam a melhor experiência em hardware."
   },
   {
     "id": 6,
@@ -92,7 +132,15 @@
       "fonte-corsair-rmx-series-3.webp",
       "fonte-corsair-rmx-series-4.webp",
       "fonte-corsair-rmx-series-5.webp"
-    ]
+    ],
+    "features": [
+      "850W de potência",
+      "Certificação 80 Plus Gold",
+      "Cabos totalmente modulares",
+      "Ventoinha de 135 mm com baixo ruído",
+      "Compatível com sistemas de alta performance"
+    ],
+    "description": "A fonte Corsair RM850x é uma escolha confiável para sistemas de alta performance. Com certificação 80 Plus Gold, ela oferece eficiência energética e cabos totalmente modulares para facilitar a instalação e organização. Ideal para gamers e profissionais que demandam estabilidade e desempenho."
   },
   {
     "id": 7,
@@ -107,7 +155,15 @@
       "cooler-para-processador-cooler-master-hyper-212-2.webp",
       "cooler-para-processador-cooler-master-hyper-212-3.webp",
       "cooler-para-processador-cooler-master-hyper-212-4.webp"
-    ]
+    ],
+    "features": [
+      "Design compacto e eficiente",
+      "Ventoinha RGB de 120 mm",
+      "4 heat pipes de cobre diretos",
+      "Compatível com Intel e AMD",
+      "Fácil instalação"
+    ],
+    "description": "O Cooler Master Hyper 212 RGB é um cooler de CPU popular por seu desempenho e valor. Com ventoinha RGB e heat pipes de cobre diretos, ele oferece resfriamento eficiente para processadores Intel e AMD. Ideal para quem busca um equilíbrio entre desempenho e estética."
   },
   {
     "id": 8,
@@ -123,7 +179,15 @@
       "teclado-gamer-sem-fio-logitech-g-pro-x-3.webp",
       "teclado-gamer-sem-fio-logitech-g-pro-x-4.webp",
       "teclado-gamer-sem-fio-logitech-g-pro-x-5.webp"
-    ]
+    ],
+    "features": [
+      "Switches mecânicos GX Blue",
+      "Design compacto e portátil",
+      "Iluminação RGB LIGHTSYNC",
+      "Cabos remováveis",
+      "Compatível com PC e consoles"
+    ],
+    "description": "O teclado mecânico Logitech G Pro X é projetado para gamers profissionais. Com switches mecânicos personalizáveis, iluminação RGB e design compacto, ele oferece desempenho e portabilidade para competições e uso diário."
   },
   {
     "id": 9,
@@ -137,7 +201,15 @@
       "HD-seagate-barracuda.webp",
       "HD-seagate-barracuda-2.webp",
       "HD-seagate-barracuda-3.webp"
-    ]
+    ],
+    "features": [
+      "2 TB de armazenamento",
+      "Velocidade de 7200 RPM",
+      "Cache de 256 MB",
+      "Interface SATA 6Gb/s",
+      "Garantia de 2 anos"
+    ],
+    "description": "O HD Seagate Barracuda é uma solução confiável para armazenamento de grande capacidade. Com velocidade de 7200 RPM e cache de 256 MB, ele é ideal para quem precisa de espaço e desempenho para armazenar dados e aplicações."
   },
   {
     "id": 10,
@@ -152,6 +224,14 @@
       "lg-ultragear-144hz-2.webp",
       "lg-ultragear-144hz-3.webp",
       "lg-ultragear-144hz-4.webp"
-    ]
+    ],
+    "features": [
+      "Tela QHD Nano IPS de 27 polegadas",
+      "Taxa de atualização de 144 Hz",
+      "Tempo de resposta de 1 ms",
+      "Suporte a NVIDIA G-SYNC",
+      "Cobertura de 98% do DCI-P3"
+    ],
+    "description": "O monitor LG UltraGear 27GL850-B é projetado para gamers que buscam desempenho e qualidade visual. Com tela QHD Nano IPS, taxa de atualização de 144 Hz e suporte a G-SYNC, ele oferece uma experiência imersiva e fluida em jogos e aplicações gráficas."
   }
 ]

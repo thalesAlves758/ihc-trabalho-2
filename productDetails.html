@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,94 +14,126 @@
   <script src="./src/js/headerOperations.js" defer></script>
   <script src="./src/js/productDetails.js" type="module" defer></script>
 </head>
+
 <body>
   <header class="h-18 bg-orange-300 w-full flex justify-center items-center border-b border-gray-300">
     <div class="flex justify-between items-center px-3 w-full gap-3 sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
-        <a href="index.html">
-        <img src="src/images/Logo.png" alt="Logo" class="h-10">
-        </a>
-    
-        <div class="flex w-full items-stretch sm:max-w-sm lg:max-w-lg">
-        <input class="w-full bg-white px-2 py-1 rounded-l-sm outline-none" type="search" name="search" id="search-input" placeholder="Pesquisar...">
-        <div class="bg-gray-200 flex justify-center items-center rounded-r-sm p-2 hover:cursor-pointer" id="search-button">
-            <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#000000">
-            <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
-            </svg>
-        </div>
-        </div>
-    
-        <div class="sm:hidden flex items-center">
-        <span class="material-symbols-outlined">
-            menu
-        </span>
-        </div>
-    
-        <div class="flex items-center gap-2">
-        <!-- Ícone do carrinho -->
-          <div class="flex items-center relative">
-              <a href="cart.html" class="flex items-center relative p-2">
-                <span class="material-symbols-outlined">shopping_cart</span>
-                <span id="shopping-cart-counter" class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
-              </a>     
-              <span id="shopping-cart-counter" class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
-          </div>
-      
-          <!-- Menu de usuário -->
-          <div class="flex relative p-2">
-              <span id="user-menu-button" class="material-symbols-outlined hover:cursor-pointer">
-              account_circle
-              </span>
-              <!-- Dropdown -->
-              <div id="user-menu-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded">
-              <ul class="py-1">
-                  <li>
-                  <a href="orders.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Meus Pedidos</a>
-                  </li>
-                  <li>
-                  <a href="account.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Minha Conta</a>
-                  </li>
-                  <li>
-                  <a href="#" id="logout" class="block px-4 py-2 text-sm hover:bg-gray-100">Logout</a>
-                  </li>
-              </ul>
-              </div>
-          </div>
-        </div>
-    </div>
-  </header>   
+      <a href="index.html">
+        <img src="src/images/Logo.png" alt="Logo" class="h-[40px] max-w-none hidden lg:block">
+        <img src="src/images/Logo-mobile.png" alt="Logo" class="w-[40px] h-[40px] max-w-none lg:hidden">
+      </a>
 
-  <main class="w-full px-2 my-2 flex flex-col items-center">
-    <div class="flex flex-col w-full sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
-      <div class="flex justify-between text-sm text-gray-500 font-semibold">
-        <span id="sold-quantity"></span>
-
-        <div class="flex items-center gap-1">
-          <span id="rating"></span>
-          <div class="flex" id="stars-container"></div>
-          <span id="reviews-count"></span>
+      <div class="flex w-full items-stretch sm:max-w-sm lg:max-w-lg">
+        <input class="w-full bg-white px-2 py-1 rounded-l-sm outline-none" type="search" name="search" id="search-input"
+          placeholder="Pesquisar...">
+        <div class="bg-gray-200 flex justify-center items-center rounded-r-sm p-2 hover:cursor-pointer"
+          id="search-button">
+          <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 -960 960 960" width="22px" fill="#000000">
+            <path
+              d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+          </svg>
         </div>
       </div>
 
-      <div class="flex flex-col gap-3 mt-2" id="product-container">
-        <h1 id="product-name"></h1>
+      <div class="flex items-center gap-2">
+        <!-- Ícone do carrinho -->
+        <div class="flex items-center relative">
+          <a href="cart.html" class="flex items-center relative p-2">
+            <span class="material-symbols-outlined">shopping_cart</span>
+            <span id="shopping-cart-counter"
+              class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+          </a>
+          <span id="shopping-cart-counter"
+            class="absolute top-0 right-0 text-xs bg-red-500 text-white rounded-full px-1 lg:text-sm"></span>
+        </div>
 
-        <div class="flex overflow-x-auto snap-mandatory snap-x scroll-smooth overscroll-x-auto scrollbar-hide" id="product-images-container"></div>
+        <!-- Menu de usuário -->
+        <div class="flex relative p-2">
+          <span id="user-menu-button" class="material-symbols-outlined hover:cursor-pointer">
+            account_circle
+          </span>
+          <!-- Dropdown -->
+          <div id="user-menu-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded">
+            <ul class="py-1">
+              <li>
+                <a href="orders.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Meus Pedidos</a>
+              </li>
+              <li>
+                <a href="account.html" class="block px-4 py-2 text-sm hover:bg-gray-100">Minha Conta</a>
+              </li>
+              <li>
+                <a href="#" id="logout" class="block px-4 py-2 text-sm hover:bg-gray-100">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-        <div id="indicators" class="flex justify-center mt-4 space-x-2"></div>
+  <main class="w-full px-2 my-2 flex flex-col items-center mb-10">
+    <div class="flex flex-col w-full sm:max-w-xl lg:max-w-2xl xl:max-w-5xl">
+      <h1 class="text-2xl font-bold self-start lg:mb-3">Detalhes</h1>
 
-        <span class="text-2xl" id="price"></span>
+      <div class="lg:flex">
+        <div class="hidden flex-col items-center gap-5 w-3/5 lg:flex px-5">
+          <div class="size-60 xl:size-70 flex justify-center items-center" id="lg-image-container"></div>
 
-        <div class="flex flex-col items-center gap-3">
-          <div class="w-full flex items-center bg-gray-200 rounded-md">
-             <select class="w-full h-full p-2 outline-none hover:cursor-pointer" id="amount-select"></select>
+          <ul class="flex gap-2 overflow-x-scroll w-full scrollbar-hide justify-center pb-2" id="lg-gallery"></ul>
+        </div>
+
+        <div class="flex flex-col gap-3 mt-2 lg:mt-0 lg:w-full lg:p-1 xl:px-3 xl:w-2/5 justify-center"
+          id="product-container">
+          <div class="flex justify-between text-sm text-gray-500 font-semibold lg:flex-col">
+            <span id="sold-quantity"></span>
+
+            <div class="flex items-center gap-1">
+              <span id="rating"></span>
+              <div class="flex" id="stars-container"></div>
+              <span id="reviews-count"></span>
+            </div>
           </div>
 
-          <button class="w-full text-sm rounded-2xl py-2 mx-2 bg-orange-300 font-bold hover:cursor-pointer" id="button-buy-product">Comprar</button>
+          <h2 id="product-name"></h2>
 
-          <button class="w-full text-sm rounded-2xl py-2 mx-2 bg-orange-100 text-orange-400 font-bold hover:cursor-pointer" id="button-add-to-cart">Adicionar ao carrinho</button>
+          <div
+            class="flex overflow-x-auto snap-mandatory snap-x scroll-smooth overscroll-x-auto scrollbar-hide lg:hidden"
+            id="product-images-container"></div>
+
+          <div id="indicators" class="flex justify-center mt-4 space-x-2 lg:hidden"></div>
+
+          <span class="text-2xl" id="price"></span>
+
+          <div class="flex flex-col items-center gap-3">
+            <div class="w-full flex items-center bg-gray-200 rounded-md">
+              <select class="w-full h-full p-2 outline-none hover:cursor-pointer" id="amount-select"></select>
+            </div>
+
+            <button class="w-full text-sm rounded-2xl py-2 mx-2 bg-orange-300 font-bold hover:cursor-pointer"
+              id="button-buy-product">Comprar</button>
+
+            <button
+              class="w-full text-sm rounded-2xl py-2 mx-2 bg-orange-100 text-orange-400 font-bold hover:cursor-pointer"
+              id="button-add-to-cart">Adicionar ao carrinho</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-10 flex flex-col gap-5">
+        <div>
+          <h2 class="text-xl">O que você precisa saber sobre este produto</h2>
+
+          <ul class="list-disc list-inside pt-2 mb-2 ml-2" id="features"></ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl mb-2">Descrição</h2>
+
+          <p class="text-justify" id="description"></p>
         </div>
       </div>
     </div>
   </main>
 </body>
+
 </html>
