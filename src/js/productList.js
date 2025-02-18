@@ -36,7 +36,7 @@ function initializeListeners() {
   }
 
   window.navigateToProduct = productId => {
-    window.location.href = `${window.location.origin}/productDetails.html?productId=${productId}`;
+    window.location.href = `./productDetails.html?productId=${productId}`;
   }
 }
 
